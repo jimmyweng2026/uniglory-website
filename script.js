@@ -45,44 +45,41 @@ if ("IntersectionObserver" in window) {
 
 const quoteForm = document.querySelector("#quote-form");
 const formNote = document.querySelector("#form-note");
-quoteForm?.addEventListener("submit", (event) => {
+const submitButton = quoteForm?.querySelector('button[type="submit"]');
+
+quoteForm?.addEventListener("submit", async (event) => {
 	event.preventDefault();
 	const formData = new FormData(quoteForm);
 	const name = String(formData.get("name") || "").trim();
-	const email = String(formData.get("email") || "").trim();
-	const interest = String(formData.get("interest") || "").trim();
-	const message = String(formData.get("message") || "").trim();
-	const subject = encodeURIComponent(`Solar inquiry from ${name}`);
-	const body = encodeURIComponent(
-		[
-			`Name: ${name}`,
-			`Email: ${email}`,
-			`Interest: ${interest}`,
-			"",
-			message ||
-				"I would like to learn more about UniGlory Energy supply options.",
-		].join("\n"),
-	);
+	formData.set("_subject", `Solar inquiry from ${name || "website visitor"}`);
+
+	if (formNote) formNote.textContent = "Sending your inquiry…";
+	if (submitButton) {
+		submitButton.disabled = true;
+		submitButton.setAttribute("aria-busy", "true");
+	}
+
 	try {
-		const mailtoUrl = new URL(
-			`mailto:sales@unigloryenergy.com?subject=${subject}&body=${body}`,
-		);
-		const isAllowedMailto =
-			mailtoUrl.protocol === "mailto:" &&
-			mailtoUrl.pathname.toLowerCase() === "sales@unigloryenergy.com";
-		if (!isAllowedMailto) {
-			if (formNote)
-				formNote.textContent =
-					"Please email sales@unigloryenergy.com directly.";
-			return;
-		}
-		window.location.assign(mailtoUrl.toString());
+		const response = await fetch(quoteForm.action, {
+			method: "POST",
+			body: formData,
+			headers: { Accept: "application/json" },
+		});
+
+		if (!response.ok) throw new Error("Form submission failed");
+		quoteForm.reset();
 		if (formNote)
 			formNote.textContent =
-				"Your email app should open with the inquiry ready to send.";
+				"Thanks — your inquiry has been sent. Our team will be in touch soon.";
 	} catch {
 		if (formNote)
-			formNote.textContent = "Please email sales@unigloryenergy.com directly.";
+			formNote.textContent =
+				"We couldn't send your inquiry right now. Please email sales@unigloryenergy.com directly.";
+	} finally {
+		if (submitButton) {
+			submitButton.disabled = false;
+			submitButton.removeAttribute("aria-busy");
+		}
 	}
 });
 
