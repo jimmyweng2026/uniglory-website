@@ -1,0 +1,8 @@
+node_modules/
+dist/
+preview.png
+.DS_Store
+.env
+.env.*
+*.local
+UniGlory公司介绍.docx
