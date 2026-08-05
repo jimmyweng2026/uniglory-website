@@ -1660,6 +1660,31 @@ h3 {
 .faq-section {
 	background: var(--paper);
 }
+.intro-section {
+	color: var(--white);
+	background: var(--ink);
+}
+.intro-section .section-label {
+	color: rgba(255, 255, 255, 0.52);
+}
+.intro-section .section-label span:first-child {
+	color: var(--lime);
+}
+.intro-section .dark-eyebrow {
+	color: rgba(255, 255, 255, 0.62);
+}
+.intro-section h2 span {
+	color: var(--lime);
+}
+.intro-copy > p:not(.eyebrow) {
+	color: rgba(255, 255, 255, 0.68);
+}
+.intro-section .dark-link {
+	color: var(--lime);
+}
+.intro-aside span {
+	color: rgba(255, 255, 255, 0.56);
+}
 .why-section,
 .contact-section,
 .site-footer {
