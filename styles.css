@@ -1,13 +1,13 @@
 :root {
 	--ink: #163b43;
 	--ink-soft: #245b62;
-	--cream: #edf7f4;
+	--cream: #ffffff;
 	--paper: #ffffff;
 	--muted: #5e706f;
 	--line: rgba(22, 59, 67, 0.14);
 	--lime: #c9eb69;
-	--aqua: #8fdcd5;
-	--orange: #f08b61;
+	--aqua: #62b6ad;
+	--orange: var(--lime);
 	--white: #ffffff;
 	--display: "Manrope", sans-serif;
 	--body: "Inter", sans-serif;
@@ -1639,4 +1639,37 @@ h3 {
 	.primary-nav a:not(.nav-cta) {
 		color: rgba(22, 59, 67, 0.78);
 	}
+}
+
+/* Two-tone page rhythm: white surfaces and the Why UniGlory teal */
+.hero {
+	background: var(--paper);
+}
+.hero-grid-pattern::after {
+	background: linear-gradient(180deg, transparent 60%, #ffffff 100%);
+}
+.intro-section,
+.solutions-section,
+.audiences-section,
+.process-section,
+.faq-section {
+	background: var(--paper);
+}
+.why-section,
+.contact-section,
+.site-footer {
+	background: var(--ink);
+}
+.solution-card-lime {
+	border: 1px solid var(--line);
+	background: #f7faf7;
+}
+.solution-card-lime .card-topline {
+	color: var(--muted);
+}
+.solution-card-lime p {
+	color: var(--muted);
+}
+.solution-card-lime .card-link {
+	border-color: var(--line);
 }
