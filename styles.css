@@ -1613,14 +1613,19 @@ h3 {
 }
 .hero-image-wrap {
 	border-color: rgba(22, 59, 67, 0.18);
-	background: #b8d4cf;
+	background: #dcebe7;
 	box-shadow: 0 35px 90px rgba(22, 59, 67, 0.18);
+}
+.hero-image-wrap img {
+	mix-blend-mode: normal;
+	opacity: 1;
+	filter: saturate(1.08) contrast(1.04) brightness(1.04);
 }
 .image-shade {
 	background: linear-gradient(
 		145deg,
-		rgba(22, 59, 67, 0.04),
-		rgba(22, 59, 67, 0.28)
+		rgba(22, 59, 67, 0.01),
+		rgba(22, 59, 67, 0.1)
 	);
 }
 .hero .light-link {
