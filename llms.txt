@@ -1,12 +1,12 @@
 # UniGlory Energy
 
-> UniGlory Energy LLC is a California-based wholesale supplier of solar modules,
+> UniGlory Energy is a California-based wholesale supplier of solar modules,
 > battery energy storage systems (BESS), and inverters for solar installers,
 > distributors, EPC contractors, and project developers across the United States.
 
 Key facts
 
-- Legal name: UniGlory Energy LLC
+- Business name: UniGlory Energy
 - Business: wholesale distribution of solar equipment (B2B, not residential retail)
 - Based in: Phelan, California, United States, with a Southern California supply and delivery focus
 - Market served: United States
@@ -32,7 +32,7 @@ Key facts
 - Who does UniGlory Energy serve? We serve solar installers, distributors, EPC contractors, and project developers across the United States.
 - What products can you supply? Our core portfolio includes solar modules, LiFePO4 battery energy storage systems, and grid-tied or hybrid inverters.
 - Can you support project and distribution orders? Yes. We can discuss utility-scale project requirements as well as flexible-quantity orders for distribution and installation businesses.
-- Where is UniGlory Energy based? UniGlory Energy LLC is based in Phelan, California, with a Southern California supply and delivery focus.
+- Where is UniGlory Energy based? UniGlory Energy is based in Phelan, California, with a Southern California supply and delivery focus.
 
 ## Pages
 
