@@ -11,12 +11,21 @@
           --virtual-time-budget=4000 --window-size=1200,630 \
           --screenshot=brand/og-image.png "file://$PWD/tools/og-image.html"
     -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <style>
+      /* The site's own fonts, loaded from the repository rather than a CDN, so
+         this file renders identically offline and never leaks a request. */
+      @font-face {
+        font-family: "Inter Tight";
+        font-style: normal;
+        font-weight: 300 700;
+        src: url("../fonts/inter-tight-latin-variable.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 300 700;
+        src: url("../fonts/inter-latin-variable.woff2") format("woff2");
+      }
       * {
         box-sizing: border-box;
       }
@@ -31,7 +40,7 @@
         height: 630px;
         overflow: hidden;
         color: #ffffff;
-        background: #163b43;
+        background: #0a1730;
         font-family: Inter, "Helvetica Neue", Arial, sans-serif;
       }
       .glow {
@@ -43,7 +52,7 @@
         border-radius: 50%;
         background: radial-gradient(
           circle,
-          rgba(201, 235, 105, 0.22),
+          rgba(77, 141, 255, 0.30),
           transparent 62%
         );
       }
@@ -53,11 +62,11 @@
         bottom: -150px;
         width: 380px;
         height: 380px;
-        border: 1px solid rgba(201, 235, 105, 0.16);
+        border: 1px solid rgba(77, 141, 255, 0.20);
         border-radius: 50%;
         box-shadow:
-          0 0 0 62px rgba(201, 235, 105, 0.05),
-          0 0 0 124px rgba(201, 235, 105, 0.032);
+          0 0 0 62px rgba(77, 141, 255, 0.06),
+          0 0 0 124px rgba(77, 141, 255, 0.038);
       }
       .frame {
         position: relative;
@@ -73,18 +82,28 @@
         height: 46px;
       }
       .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 11px;
         margin: 44px 0 16px;
-        color: #c9eb69;
-        font-family: Manrope, Inter, sans-serif;
+        color: #4d8dff;
+        font-family: "Inter Tight", Inter, sans-serif;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 0.19em;
         text-transform: uppercase;
       }
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #f5a524;
+      }
       h1 {
         max-width: 920px;
         margin: 0 0 20px;
-        font-family: Manrope, Inter, sans-serif;
+        font-family: "Inter Tight", Inter, sans-serif;
         font-size: 57px;
         font-weight: 700;
         line-height: 1.04;
@@ -106,8 +125,8 @@
         border-top: 1px solid rgba(255, 255, 255, 0.16);
       }
       .footer strong {
-        color: #c9eb69;
-        font-family: Manrope, Inter, sans-serif;
+        color: #4d8dff;
+        font-family: "Inter Tight", Inter, sans-serif;
         font-size: 16px;
         font-weight: 600;
       }

@@ -70,11 +70,11 @@ static weights:
 | File | Covers | Size |
 | --- | --- | --- |
 | `fonts/inter-latin-variable.woff2` | Inter 300–700 | 48 KB |
-| `fonts/manrope-latin-variable.woff2` | Manrope 300–700 | 24 KB |
+| `fonts/inter-tight-latin-variable.woff2` | Inter Tight 300–700 | 24 KB |
 
 Both are latin-subset only (the site is English-only) and both are licensed under
 the SIL Open Font License 1.1 — the licence texts ship alongside them as
-`fonts/Inter-OFL.txt` and `fonts/Manrope-OFL.txt`, as that licence requires.
+`fonts/Inter-OFL.txt` and `fonts/Inter Tight-OFL.txt`, as that licence requires.
 
 There are no requests to `fonts.googleapis.com` or `fonts.gstatic.com` any more.
 The display face is preloaded in `index.html` so the headline does not swap
@@ -115,11 +115,20 @@ against the build, serve `dist/`, add the script to a copy of `index.html`, and
 read the `data-contrast` attribute from the DOM (the file header documents the
 exact steps).
 
-Current state: 169 text elements checked at 1440px, 900px and 500px — 0 failures.
+Current state: 173 elements checked on the home page, 106 / 106 / 104 on the
+three product pages, at 1440px, 900px and 500px — 0 failures.
 
-Two tokens exist purely to keep accents readable on light surfaces:
-`--lime-ink` (`#617b19`) and `--aqua-ink` (`#257e75`). The bright `--lime` and
-`--aqua` are still used for text on the dark ink surfaces, where they clear 5:1.
+The accent system is three tokens because one blue cannot do every job:
+
+- `--accent` (`#1b4dff`) — fills carrying white text, and text on white. Both
+  clear 5.9:1, which is why a single token replaces the old bright-lime /
+  lime-ink pair.
+- `--accent-on-dark` (`#4d8dff`) — the same hue lightened for the navy surfaces
+  (5.6:1 on `--ink`). Using `--accent` there would fail at 3.0:1.
+- `--gold` (`#f5a524`) — decoration only: the eyebrow dot, the orbit, the float
+  card, the stamp. As text on white it reaches only 2.0:1, so `--gold-ink`
+  (`#8f5e00`, 5.6:1) exists for the rare case where gold must be text on light.
+
 `--muted-on-dark` is the equivalent for muted copy on dark sections.
 
 ## Brand images
@@ -128,7 +137,7 @@ Everything in `brand/` is derived from the master files in `Uniglory-logo/`:
 
 - `uniglory-logo.svg` — master artwork, print size attributes converted to pixels
 - `uniglory-logo-white.svg` — same artwork with the blue wordmark set to white, for dark backgrounds
-- `favicon.svg` — sun mark on a `#163b43` rounded tile
+- `favicon.svg` — sun mark on a `#0a1730` rounded tile
 - `apple-touch-icon.png` — 180×180 render of `tools/apple-touch-icon.svg`
 - `og-image.png` — 1200×630 social share image, rendered from `tools/og-image.html`
 - `uniglory-logo.png` — transparent PNG referenced by the structured data
