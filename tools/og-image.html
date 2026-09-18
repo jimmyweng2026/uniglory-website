@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UniGlory Energy — social share image (1200×630)</title>
+    <!--
+      Source file for /brand/og-image.png.
+      Re-render after any brand change:
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+          --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
+          --virtual-time-budget=4000 --window-size=1200,630 \
+          --screenshot=brand/og-image.png "file://$PWD/tools/og-image.html"
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        color: #ffffff;
+        background: #163b43;
+        font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+      }
+      .glow {
+        position: absolute;
+        top: -260px;
+        right: -180px;
+        width: 720px;
+        height: 720px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(201, 235, 105, 0.22),
+          transparent 62%
+        );
+      }
+      .rays {
+        position: absolute;
+        left: -90px;
+        bottom: -150px;
+        width: 380px;
+        height: 380px;
+        border: 1px solid rgba(201, 235, 105, 0.16);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 62px rgba(201, 235, 105, 0.05),
+          0 0 0 124px rgba(201, 235, 105, 0.032);
+      }
+      .frame {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 54px 64px 46px;
+      }
+      .logo {
+        display: block;
+        align-self: flex-start;
+        width: auto;
+        height: 46px;
+      }
+      .eyebrow {
+        margin: 44px 0 16px;
+        color: #c9eb69;
+        font-family: Manrope, Inter, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.19em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 920px;
+        margin: 0 0 20px;
+        font-family: Manrope, Inter, sans-serif;
+        font-size: 57px;
+        font-weight: 700;
+        line-height: 1.04;
+        letter-spacing: -0.03em;
+      }
+      .lede {
+        max-width: 780px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.73);
+        font-size: 20px;
+        line-height: 1.45;
+      }
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+      }
+      .footer strong {
+        color: #c9eb69;
+        font-family: Manrope, Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .footer span {
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="rays"></div>
+    <div class="frame">
+      <img class="logo" src="../brand/uniglory-logo-white.svg" alt="" />
+      <p class="eyebrow">Solar wholesale · Southern California</p>
+      <h1>Wholesale solar modules,<br />storage &amp; inverters</h1>
+      <p class="lede">
+        A California-based supply partner for installers, EPC contractors,
+        distributors, and project developers across the United States.
+      </p>
+      <div class="footer">
+        <strong>www.unigloryenergy.com</strong>
+        <span>Modules · BESS · Inverters</span>
+      </div>
+    </div>
+  </body>
+</html>

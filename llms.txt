@@ -1,0 +1,45 @@
+# UniGlory Energy
+
+> UniGlory Energy LLC is a California-based wholesale supplier of solar modules,
+> battery energy storage systems (BESS), and inverters for solar installers,
+> distributors, EPC contractors, and project developers across the United States.
+
+Key facts
+
+- Legal name: UniGlory Energy LLC
+- Business: wholesale distribution of solar equipment (B2B, not residential retail)
+- Based in: Phelan, California, United States, with a Southern California supply and delivery focus
+- Market served: United States
+- Contact: sales@unigloryenergy.com · +1 442 462 9310
+- Website: https://www.unigloryenergy.com/
+
+## Products and services
+
+- Solar modules: PERC and TOPCon modules for residential, commercial, and utility-scale applications, including all-black and bifacial formats. See [Solar modules](https://www.unigloryenergy.com/solar-modules/).
+- Battery energy storage: lithium iron phosphate (LiFePO4) battery energy storage systems for residential, commercial, and project-scale installations.
+- Solar inverters: grid-tied and hybrid inverters matched to the modules and storage specified for each project.
+- Supply support: order quantities from single-pallet distribution orders to utility-scale project supply, with project-scale logistics and post-sale support.
+
+## Customers
+
+- Solar installers
+- Solar distributors
+- EPC contractors
+- Project developers
+
+## Frequently asked questions
+
+- Who does UniGlory Energy serve? We serve solar installers, distributors, EPC contractors, and project developers across the United States.
+- What products can you supply? Our core portfolio includes solar modules, LiFePO4 battery energy storage systems, and grid-tied or hybrid inverters.
+- Can you support project and distribution orders? Yes. We can discuss utility-scale project requirements as well as flexible-quantity orders for distribution and installation businesses.
+- Where is UniGlory Energy based? UniGlory Energy LLC is based in Phelan, California, with a Southern California supply and delivery focus.
+
+## Pages
+
+- [Home](https://www.unigloryenergy.com/): company overview, product portfolio, how ordering works, FAQ, and a quote request form.
+- [Solar modules](https://www.unigloryenergy.com/solar-modules/): the module range, what to check when specifying modules, and module-specific FAQ.
+
+## Contact
+
+- [Request a quote](https://www.unigloryenergy.com/#contact)
+- [Sitemap](https://www.unigloryenergy.com/sitemap.xml)
