@@ -17,10 +17,12 @@ Then open the local URL shown by Vite.
 npm run build
 ```
 
-The build runs in two steps:
+The build runs in three steps:
 
-1. `vite build` writes the minified, hashed bundle into `dist/`.
-2. `scripts/copy-static.mjs` copies the files Vite does not bundle
+1. `scripts/check-pages.mjs` fails the build if the shared `<header>` or
+   `<footer>` markup differs between pages.
+2. `vite build` writes the minified, hashed bundle into `dist/`.
+3. `scripts/copy-static.mjs` copies the files Vite does not bundle
    (`script.js`, `robots.txt`, `sitemap.xml`, `llms.txt`, `CNAME`) plus the
    `brand/` folder into `dist/`.
 
@@ -28,15 +30,19 @@ The build runs in two steps:
 
 ## Deployment
 
-The site is published to GitHub Pages by `.github/workflows/deploy.yml`.
+The site is published to GitHub Pages by `.github/workflows/deploy.yml`: every
+push to `main` builds on GitHub's runners and publishes `dist/`. Nothing from
+`dist/` is committed — it is generated in CI.
 
-One-time repository setup:
+The repository is configured with:
 
-1. `Settings → Pages → Build and deployment → Source` → **GitHub Actions**.
-2. `Settings → Pages → Custom domain` → `www.unigloryenergy.com` (HTTPS enabled).
+- `Settings → Pages → Build and deployment → Source`: **GitHub Actions**
+- `Settings → Pages → Custom domain`: `www.unigloryenergy.com`, HTTPS enforced
 
-After that, every push to `main` builds the site on GitHub's runners and
-publishes `dist/`. There is nothing to commit from `dist/` itself.
+Because the Pages source is GitHub Actions, the repository root is not published
+at all: only what the build writes into `dist/` reaches the web. That is why
+this README, `package.json`, `tools/` and `scripts/` are not downloadable from
+the live site.
 
 ## Project layout
 
