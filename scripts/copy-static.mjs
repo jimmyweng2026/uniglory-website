@@ -25,6 +25,7 @@ const entries = [
 	"robots.txt",
 	"sitemap.xml",
 	"llms.txt",
+	"BingSiteAuth.xml",
 	"CNAME",
 	"brand",
 ];
