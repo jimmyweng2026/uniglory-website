@@ -28,8 +28,8 @@
 	--gold-ink: #8f5e00;
 	--muted-on-dark: rgba(255, 255, 255, 0.72);
 	--white: #ffffff;
-	--display: "Inter Tight", "Inter", system-ui, -apple-system, sans-serif;
-	--body: "Inter", system-ui, -apple-system, sans-serif;
+	--display: "Instrument Serif", Georgia, "Times New Roman", serif;
+	--body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 	--radius-lg: 24px;
 	--radius-md: 14px;
 	--shadow: 0 18px 48px rgba(13, 13, 15, 0.08);
@@ -99,10 +99,10 @@ button {
 	gap: 10px;
 	margin: 0 0 22px;
 	color: var(--muted);
-	font-family: var(--display);
-	font-size: 11px;
+	font-family: var(--body);
+	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.15em;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
 .eyebrow-dot {
@@ -131,10 +131,10 @@ button {
 	align-items: center;
 	gap: 14px;
 	color: var(--muted);
-	font-family: var(--display);
-	font-size: 10px;
+	font-family: var(--body);
+	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.16em;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
 .section-label span:first-child {
@@ -150,19 +150,21 @@ h1,
 h2,
 h3 {
 	font-family: var(--display);
-	font-weight: 500;
-	letter-spacing: -0.055em;
-	line-height: 0.98;
+	/* Instrument Serif ships a single 400 weight. Anything heavier is synthesised
+	   by the browser and looks smeared — never raise this. */
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	line-height: 1.02;
 }
 h2 {
 	margin-bottom: 28px;
-	font-size: clamp(42px, 5vw, 72px);
+	font-size: clamp(36px, 4.2vw, 54px);
 }
 h2 span {
 	color: #86888c;
 }
 h3 {
-	font-size: 28px;
+	font-size: 32px;
 }
 .text-link {
 	display: inline-flex;
@@ -170,7 +172,7 @@ h3 {
 	gap: 12px;
 	padding-bottom: 8px;
 	border-bottom: 1px solid currentColor;
-	font-family: var(--display);
+	font-family: var(--body);
 	font-size: 14px;
 	font-weight: 600;
 	transition:
@@ -196,8 +198,8 @@ h3 {
 	padding: 0 22px;
 	border: 1px solid transparent;
 	border-radius: 999px;
-	font-family: var(--display);
-	font-size: 13px;
+	font-family: var(--body);
+	font-size: 14px;
 	font-weight: 600;
 	transition:
 		transform 0.25s ease,
@@ -254,8 +256,8 @@ h3 {
 	display: flex;
 	align-items: center;
 	gap: 34px;
-	font-family: var(--display);
-	font-size: 12px;
+	font-family: var(--body);
+	font-size: 14px;
 	font-weight: 500;
 }
 .primary-nav a:not(.nav-cta) {
@@ -346,7 +348,7 @@ h3 {
 }
 .hero h1 {
 	margin: 0 0 28px;
-	font-size: clamp(68px, 8.3vw, 126px);
+	font-size: clamp(40px, 5.2vw, 76px);
 }
 .hero h1 em {
 	color: var(--heading-soft);
@@ -376,15 +378,15 @@ h3 {
 }
 .proof-item strong {
 	color: var(--ink);
-	font-family: var(--display);
+	font-family: var(--body);
 	font-size: 20px;
 	font-weight: 500;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.01em;
 }
 .proof-item span {
 	color: rgba(255, 255, 255, 0.48);
-	font-size: 10px;
-	letter-spacing: 0.08em;
+	font-size: 12px;
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
 }
 .proof-line {
@@ -435,16 +437,16 @@ h3 {
 	background: var(--gold);
 	border-radius: 13px;
 	box-shadow: 0 15px 35px rgba(13, 13, 15, 0.08);
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.25;
 }
 .hero-float-card b {
-	font-family: var(--display);
+	font-family: var(--body);
 	font-size: 16px;
 	font-weight: 600;
 }
 .float-icon {
-	font-size: 22px;
+	font-size: 25px;
 }
 .sun-orbit {
 	position: absolute;
@@ -481,9 +483,9 @@ h3 {
 	justify-content: space-between;
 	margin: 14px 0 0;
 	color: rgba(255, 255, 255, 0.45);
-	font-family: var(--display);
-	font-size: 11px;
-	letter-spacing: 0.08em;
+	font-family: var(--body);
+	font-size: 12px;
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
 }
 .visual-caption span {
@@ -499,10 +501,10 @@ h3 {
 	border-top: 1px solid var(--line);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 	color: var(--muted);
-	font-family: var(--display);
-	font-size: 11px;
+	font-family: var(--body);
+	font-size: 12px;
 	font-weight: 500;
-	letter-spacing: 0.17em;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
 .marquee-track {
@@ -564,8 +566,8 @@ h3 {
 }
 .intro-aside span {
 	color: var(--muted);
-	font-size: 11px;
-	letter-spacing: 0.08em;
+	font-size: 12px;
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
 }
 
@@ -618,8 +620,8 @@ h3 {
 	display: flex;
 	justify-content: space-between;
 	color: var(--muted-on-dark);
-	font-family: var(--display);
-	font-size: 10px;
+	font-family: var(--body);
+	font-size: 12px;
 	letter-spacing: 0.14em;
 }
 .solution-card-tint .card-topline {
@@ -629,7 +631,7 @@ h3 {
 	position: relative;
 	z-index: 1;
 	margin: auto 0 18px;
-	font-size: clamp(38px, 4vw, 54px);
+	font-size: clamp(28px, 3.4vw, 40px);
 }
 .solution-card p {
 	position: relative;
@@ -650,8 +652,8 @@ h3 {
 	padding-top: 16px;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 	color: var(--white);
-	font-family: var(--display);
-	font-size: 12px;
+	font-family: var(--body);
+	font-size: 14px;
 	font-weight: 600;
 }
 .solution-card-tint .card-link {
@@ -726,7 +728,7 @@ h3 {
 }
 .inverter-icon b {
 	position: absolute;
-	font-family: var(--display);
+	font-family: var(--body);
 	font-size: 18px;
 	font-weight: 400;
 }
@@ -783,15 +785,17 @@ h3 {
 	transform: rotate(11deg);
 }
 .why-stamp span {
-	font-size: 8px;
+	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.16em;
+	letter-spacing: 0.14em;
 }
 .why-stamp strong {
 	font-family: var(--display);
-	font-size: 23px;
+	/* 衬线体只有 400；<strong> 默认 700 会被合成，必须显式压回去 */
+	font-weight: 400;
+	font-size: 25px;
 	line-height: 0.86;
-	letter-spacing: -0.08em;
+	letter-spacing: -0.01em;
 }
 .why-copy h2 {
 	margin-bottom: 22px;
@@ -827,19 +831,19 @@ h3 {
 }
 .benefit-number {
 	color: var(--muted-on-dark);
-	font-family: var(--display);
-	font-size: 11px;
+	font-family: var(--body);
+	font-size: 12px;
 }
 .benefit h3 {
 	margin: 0 0 7px;
 	color: var(--white);
-	font-size: 19px;
-	letter-spacing: -0.03em;
+	font-size: 20px;
+	letter-spacing: -0.01em;
 }
 .benefit p {
 	margin: 0;
 	color: var(--muted-on-dark);
-	font-size: 13px;
+	font-size: 14px;
 }
 
 /* Audiences */
@@ -881,7 +885,7 @@ h3 {
 .audience-icon {
 	display: block;
 	margin-bottom: 28px;
-	font-family: var(--display);
+	font-family: var(--body);
 	font-size: 34px;
 	font-weight: 400;
 }
@@ -899,7 +903,7 @@ h3 {
 	position: absolute;
 	right: 28px;
 	bottom: 28px;
-	font-size: 22px;
+	font-size: 25px;
 }
 
 /* Process */
@@ -943,19 +947,19 @@ h3 {
 }
 .process-step > span {
 	color: var(--muted);
-	font-family: var(--display);
-	font-size: 11px;
+	font-family: var(--body);
+	font-size: 12px;
 }
 .process-step h3 {
 	margin: 48px 0 10px;
 	font-size: 20px;
-	letter-spacing: -0.03em;
+	letter-spacing: -0.01em;
 }
 .process-step p {
 	max-width: 190px;
 	margin: 0;
 	color: var(--muted);
-	font-size: 13px;
+	font-size: 14px;
 }
 
 /* Contact */
@@ -987,7 +991,7 @@ h3 {
 .contact-copy h2 {
 	max-width: 570px;
 	margin-bottom: 25px;
-	font-size: clamp(58px, 7vw, 98px);
+	font-size: clamp(38px, 4.8vw, 64px);
 }
 .contact-copy h2 em {
 	color: var(--heading-soft-on-dark);
@@ -996,7 +1000,7 @@ h3 {
 .contact-copy > p:not(.eyebrow) {
 	max-width: 380px;
 	color: rgba(255, 255, 255, 0.6);
-	font-size: 17px;
+	font-size: 18px;
 }
 .contact-details {
 	display: grid;
@@ -1010,7 +1014,7 @@ h3 {
 	padding-bottom: 10px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	color: var(--white);
-	font-family: var(--display);
+	font-family: var(--body);
 	font-size: 14px;
 }
 .quote-form {
@@ -1025,10 +1029,10 @@ h3 {
 	justify-content: space-between;
 	margin-bottom: 30px;
 	color: var(--muted);
-	font-family: var(--display);
-	font-size: 10px;
+	font-family: var(--body);
+	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.13em;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
 .form-heading span:first-child {
@@ -1039,9 +1043,9 @@ h3 {
 	gap: 7px;
 	margin-bottom: 18px;
 	color: #596764;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
 }
 .quote-form input,
@@ -1055,7 +1059,7 @@ h3 {
 	border-radius: 0;
 	color: var(--ink);
 	background: transparent;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0;
 	text-transform: none;
@@ -1075,7 +1079,7 @@ h3 {
 .form-note {
 	margin: 14px 0 0;
 	color: var(--muted);
-	font-size: 11px;
+	font-size: 12px;
 	text-align: center;
 }
 
@@ -1113,7 +1117,7 @@ h3 {
 	padding: 25px 0;
 	list-style: none;
 	cursor: pointer;
-	font-family: var(--display);
+	font-family: var(--body);
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -1122,7 +1126,7 @@ h3 {
 }
 .faq-list summary span {
 	color: var(--muted);
-	font-size: 22px;
+	font-size: 25px;
 	font-weight: 300;
 	transition: transform 0.2s ease;
 }
@@ -1144,7 +1148,7 @@ h3 {
 .footer-top p {
 	margin: 0;
 	color: var(--muted-on-dark);
-	font-size: 13px;
+	font-size: 14px;
 }
 .footer-bottom {
 	display: flex;
@@ -1152,8 +1156,8 @@ h3 {
 	gap: 20px;
 	padding: 21px 0 26px;
 	color: var(--muted-on-dark);
-	font-size: 10px;
-	letter-spacing: 0.03em;
+	font-size: 12px;
+	letter-spacing: 0.06em;
 }
 
 /* Motion */
@@ -1212,7 +1216,7 @@ h3 {
 		max-width: 650px;
 	}
 	.hero h1 {
-		font-size: clamp(66px, 14vw, 108px);
+		font-size: clamp(38px, 10vw, 66px);
 	}
 	.hero-visual {
 		max-width: 590px;
@@ -1332,7 +1336,7 @@ h3 {
 		padding-bottom: 92px;
 	}
 	.hero h1 {
-		font-size: clamp(59px, 16vw, 88px);
+		font-size: clamp(34px, 13vw, 55px);
 	}
 	.hero-lede {
 		font-size: 16px;
@@ -1347,8 +1351,8 @@ h3 {
 		gap: 13px;
 	}
 	.proof-item span {
-		font-size: 8px;
-		letter-spacing: 0.02em;
+		font-size: 12px;
+		letter-spacing: 0.06em;
 	}
 	.hero-visual {
 		width: 88%;
@@ -1417,7 +1421,7 @@ h3 {
 		height: 120px;
 	}
 	.why-stamp strong {
-		font-size: 19px;
+		font-size: 20px;
 	}
 	.why-copy .section-label {
 		margin-bottom: 45px;
@@ -1469,10 +1473,10 @@ h3 {
 	}
 	.process-step h3 {
 		margin-top: 35px;
-		font-size: 17px;
+		font-size: 18px;
 	}
 	.process-step p {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.contact-grid {
 		display: block;
@@ -1677,10 +1681,10 @@ h3 {
 	gap: 9px;
 	margin-bottom: 28px;
 	color: var(--muted);
-	font-family: var(--display);
-	font-size: 11px;
+	font-family: var(--body);
+	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.12em;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
 .breadcrumb a:hover {
@@ -1692,7 +1696,7 @@ h3 {
 .page-hero h1 {
 	max-width: 16ch;
 	margin: 0 0 26px;
-	font-size: clamp(44px, 6.2vw, 86px);
+	font-size: clamp(34px, 4.6vw, 58px);
 	line-height: 1;
 }
 .page-hero .lede {
@@ -1726,8 +1730,8 @@ h3 {
 	border-bottom: 1px solid var(--line);
 }
 .spec-list b {
-	font-family: var(--display);
-	font-size: 13px;
+	font-family: var(--body);
+	font-size: 14px;
 	font-weight: 600;
 }
 .spec-list span {
@@ -1746,14 +1750,14 @@ h3 {
 }
 .checklist .mark {
 	color: var(--muted);
-	font-family: var(--display);
-	font-size: 11px;
+	font-family: var(--body);
+	font-size: 12px;
 	font-weight: 600;
 }
 .checklist h3 {
 	margin: 0 0 7px;
-	font-size: 19px;
-	letter-spacing: -0.03em;
+	font-size: 20px;
+	letter-spacing: -0.01em;
 }
 .checklist p {
 	max-width: 640px;
@@ -1773,7 +1777,7 @@ h3 {
 .page-cta h2 {
 	max-width: 780px;
 	margin: 0;
-	font-size: clamp(38px, 4.6vw, 66px);
+	font-size: clamp(30px, 3.6vw, 46px);
 }
 .page-cta h2 em {
 	color: var(--heading-soft-on-dark);
@@ -1834,7 +1838,7 @@ h3 {
 }
 .nav-products > summary::after {
 	content: "▾";
-	font-size: 9px;
+	font-size: 12px;
 	opacity: 0.65;
 }
 .nav-products > summary:hover,
@@ -1870,9 +1874,9 @@ h3 {
 	border-top: 1px solid var(--line);
 	border-radius: 0 0 9px 9px;
 	color: var(--muted);
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.11em;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
 
@@ -2050,7 +2054,7 @@ main p a:hover,
 	max-width: 300px;
 	margin: 20px 0 0;
 	color: var(--muted-on-dark);
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.6;
 }
 .footer-col {
@@ -2062,14 +2066,14 @@ main p a:hover,
 	margin: 0 0 7px;
 	color: var(--muted-on-dark);
 	font-family: var(--body);
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
 .site-footer .footer-col a {
 	color: var(--white);
-	font-size: 15px;
+	font-size: 16px;
 	text-decoration: none;
 	transition: color 0.2s ease;
 }
@@ -2079,7 +2083,7 @@ main p a:hover,
 .footer-col p {
 	margin: 0;
 	color: var(--muted-on-dark);
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.55;
 }
 .site-footer .footer-bottom {
@@ -2090,7 +2094,7 @@ main p a:hover,
 	padding: 22px 0 32px;
 	border-top: 1px solid rgba(255, 255, 255, 0.15);
 	color: var(--muted-on-dark);
-	font-size: 13px;
+	font-size: 14px;
 }
 .site-footer .footer-top-link {
 	color: var(--white);
