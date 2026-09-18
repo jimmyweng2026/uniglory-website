@@ -2,7 +2,7 @@
   "name": "uniglory-energy-website",
   "version": "1.0.0",
   "private": true,
-  "description": "UniGlory Energy LLC marketing website",
+  "description": "UniGlory Energy marketing website",
   "scripts": {
     "dev": "vite",
     "build": "node scripts/check-pages.mjs && vite build && node scripts/copy-static.mjs && node scripts/check-links.mjs",

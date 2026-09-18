@@ -1,6 +1,12 @@
 # UniGlory Energy website
 
-A fast, static marketing website for UniGlory Energy LLC, built with Vite.
+> **Working on this project?** Read `HANDOFF.md` first. It carries the
+> current state, the design tokens and their contrast ratios, verification
+> recipes, open TODOs, and a session log. Update sections 2, 11 and 12 before
+> you finish. It is gitignored on purpose: the repository is public.
+
+
+A fast, static marketing website for UniGlory Energy, built with Vite.
 
 ## Run locally
 

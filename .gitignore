@@ -13,3 +13,7 @@ UniGlory Energy GCL.xlsx
 
 # Local screenshot and probe scratch space
 _scratch/
+
+# Continuity notes — internal state, tokens, todos, session log.
+# The repository is public, so this stays local.
+HANDOFF.md
