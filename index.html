@@ -64,7 +64,7 @@
       href="/fonts/manrope-latin-variable.woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="/styles.css?v=7" />
+    <link rel="stylesheet" href="/styles.css?v=8" />
 
     <script type="application/ld+json">
         {
@@ -274,8 +274,15 @@
           class="primary-nav"
           aria-label="Primary navigation"
         >
-          <a href="/#solutions">Solutions</a>
-          <a href="/solar-modules/">Solar modules</a>
+          <details class="nav-products">
+            <summary>Products</summary>
+            <div class="nav-products-panel">
+              <a href="/solar-modules/">Solar modules</a>
+              <a href="/battery-storage/">Battery storage</a>
+              <a href="/inverters/">Inverters</a>
+              <a class="panel-all" href="/#solutions">All solutions</a>
+            </div>
+          </details>
           <a href="/#why-uniglory">Why UniGlory</a>
           <a href="/#about">About</a>
           <a href="/#faq">FAQ</a>
