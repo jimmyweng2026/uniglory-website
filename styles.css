@@ -117,7 +117,14 @@ button {
 	color: var(--muted);
 }
 .section {
-	padding: 136px 0;
+	/* 垂直节奏：相邻两个同底色区段的内边距会叠加成一条纯白带（104+104=208px），
+	   眼睛会把它读成“两段色带”，这正是页面显得松散的原因。同底色邻接取小值。 */
+	padding: 76px 0;
+}
+/* 深色色带（Why / Contact）自带分量，保留更大的呼吸，让色带边界清晰 */
+.section.why-section,
+.section.contact-section {
+	padding: 108px 0;
 }
 .section-label {
 	display: flex;
@@ -523,8 +530,8 @@ h3 {
 }
 .intro-grid {
 	display: grid;
-	grid-template-columns: 1fr 2fr 0.8fr;
-	gap: 60px;
+	grid-template-columns: minmax(0, 170px) minmax(0, 1fr) minmax(0, 296px);
+	gap: 40px;
 }
 .intro-copy {
 	max-width: 660px;
@@ -568,18 +575,18 @@ h3 {
 }
 .section-heading {
 	display: grid;
-	grid-template-columns: 1fr 1.45fr 1fr;
-	gap: 60px;
-	align-items: end;
-	margin-bottom: 58px;
+	grid-template-columns: minmax(0, 170px) minmax(0, 1fr) minmax(0, 296px);
+	gap: 40px;
+	align-items: start;
+	margin-bottom: 52px;
 }
 .section-heading h2 {
 	margin-bottom: 0;
 }
 .heading-note {
-	max-width: 240px;
+	max-width: 296px;
 	justify-self: end;
-	margin-bottom: 7px;
+	margin-bottom: 0;
 	color: var(--muted);
 	font-size: 14px;
 }
@@ -601,13 +608,9 @@ h3 {
 	color: var(--white);
 	background: var(--ink);
 }
-.solution-card-image {
-	color: var(--white);
-	background: var(--ink-soft);
-}
 .solution-card-tint {
 	color: var(--ink);
-	background: var(--accent);
+	background: var(--surface);
 }
 .card-topline {
 	position: relative;
@@ -654,26 +657,6 @@ h3 {
 .solution-card-tint .card-link {
 	color: var(--ink);
 	border-color: rgba(13, 13, 15, 0.23);
-}
-.card-image {
-	position: absolute;
-	inset: 0;
-	opacity: 0.35;
-}
-.card-image::after {
-	position: absolute;
-	inset: 0;
-	content: "";
-	background: linear-gradient(
-		180deg,
-		rgba(13, 13, 15, 0.25),
-		var(--ink-soft) 80%
-	);
-}
-.card-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
 }
 .solution-icon {
 	position: relative;
@@ -755,7 +738,7 @@ h3 {
 }
 .why-grid {
 	display: grid;
-	grid-template-columns: 0.92fr 1.08fr;
+	grid-template-columns: 1.08fr 0.92fr;
 	gap: clamp(70px, 10vw, 145px);
 	align-items: center;
 }
@@ -783,8 +766,8 @@ h3 {
 }
 .why-stamp {
 	position: absolute;
-	right: -42px;
-	bottom: 45px;
+	left: 28px;
+	bottom: 28px;
 	width: 147px;
 	height: 147px;
 	display: flex;
@@ -865,9 +848,10 @@ h3 {
 }
 .audience-intro {
 	display: grid;
-	grid-template-columns: 1fr 2.2fr;
+	grid-template-columns: minmax(0, 170px) minmax(0, 1fr) minmax(0, 296px);
 	align-items: start;
-	margin-bottom: 74px;
+	margin-bottom: 52px;
+	column-gap: 40px;
 }
 .audience-intro h2 {
 	margin: 0;
@@ -924,9 +908,10 @@ h3 {
 }
 .process-top {
 	display: grid;
-	grid-template-columns: 1fr 1.25fr 1.25fr;
+	grid-template-columns: minmax(0, 170px) minmax(0, 1fr) minmax(0, 296px);
 	align-items: start;
-	margin-bottom: 72px;
+	margin-bottom: 52px;
+	column-gap: 40px;
 }
 .process-top h2 {
 	margin: 26px 0 0;
@@ -1156,32 +1141,10 @@ h3 {
 	color: var(--white);
 	background: var(--ink);
 }
-.footer-top {
-	display: grid;
-	grid-template-columns: 1fr 1fr auto;
-	gap: 30px;
-	align-items: center;
-	min-height: 150px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
 .footer-top p {
 	margin: 0;
 	color: var(--muted-on-dark);
 	font-size: 13px;
-}
-.footer-arrow {
-	width: 43px;
-	height: 43px;
-	display: grid;
-	place-items: center;
-	border: 1px solid rgba(2, 112, 155, 0.32);
-	border-radius: 50%;
-	color: var(--white);
-	font-size: 22px;
-}
-.footer-arrow:hover {
-	color: var(--ink);
-	background: var(--accent);
 }
 .footer-bottom {
 	display: flex;
@@ -1264,7 +1227,7 @@ h3 {
 		gap: 55px;
 	}
 	.intro-grid {
-		gap: 30px;
+		gap: 40px;
 	}
 	.intro-aside {
 		max-width: 320px;
@@ -1272,7 +1235,7 @@ h3 {
 	}
 	.section-heading {
 		grid-template-columns: 1fr 1.8fr;
-		gap: 30px;
+		gap: 40px;
 	}
 	.heading-note {
 		grid-column: 2;
@@ -1296,7 +1259,7 @@ h3 {
 	}
 	.process-top {
 		grid-template-columns: 1fr 1.8fr;
-		gap: 30px;
+		gap: 40px;
 	}
 	.process-top .eyebrow {
 		grid-column: 2;
@@ -1317,7 +1280,11 @@ h3 {
 		width: calc(100% - 36px);
 	}
 	.section {
-		padding: 86px 0;
+		padding: 64px 0;
+	}
+	.section.why-section,
+	.section.contact-section {
+		padding: 88px 0;
 	}
 	.site-header {
 		background: rgba(13, 13, 15, 0.72);
@@ -1456,7 +1423,7 @@ h3 {
 		margin-bottom: 45px;
 	}
 	.audience-intro {
-		margin-bottom: 45px;
+		margin-bottom: 52px;
 	}
 	.audience-intro .section-label {
 		margin-bottom: 38px;
@@ -1677,7 +1644,6 @@ h3 {
 }
 .solution-card-tint {
 	border: 1px solid var(--line);
-	background: #f5f5f6;
 }
 .solution-card-tint .card-topline {
 	color: var(--muted);
@@ -1970,4 +1936,180 @@ main p a:hover,
 .faq-intro a:hover,
 .card-link:hover {
 	text-decoration-thickness: 2px;
+}
+
+/* ---------------------------------------------------------------------------
+   One grid for every section header.
+   Label, heading and note occupy the same three tracks in every section, so
+   headings start at the same x everywhere on the page. This replaces three
+   ad-hoc grids (1fr 1.45fr 1fr / 1fr 2.2fr / 1fr 1.25fr 1.25fr) that landed
+   the heading somewhere different per section.
+   --------------------------------------------------------------------------- */
+.section-heading > .section-label,
+.audience-intro > .section-label,
+.process-top > .section-label {
+	grid-column: 1;
+	grid-row: 1;
+	align-self: start;
+}
+.section-heading > div:not(.section-label),
+.audience-intro > h2 {
+	grid-column: 2;
+	grid-row: 1;
+}
+/* In .process-top the eyebrow and the heading are siblings, so the label spans
+   both rows and the two text pieces stack in the same column. */
+.process-top > .section-label {
+	grid-row: 1 / span 2;
+}
+.process-top > .eyebrow {
+	grid-column: 2;
+	grid-row: 1;
+}
+.process-top > h2 {
+	grid-column: 2;
+	grid-row: 2;
+}
+.section-heading > .heading-note {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive section-header grid.
+   These restate the same selectors as the desktop rules above, so specificity
+   ties and source order decides. Without this the desktop three-track template
+   quietly wins inside the breakpoints and the header overflows on a phone.
+   --------------------------------------------------------------------------- */
+@media (max-width: 980px) {
+	.section-heading,
+	.audience-intro,
+	.process-top {
+		grid-template-columns: minmax(0, 140px) minmax(0, 1fr);
+		column-gap: 32px;
+	}
+	.section-heading > .section-label,
+	.audience-intro > .section-label,
+	.process-top > .section-label {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.section-heading > div:not(.section-label),
+	.audience-intro > h2,
+	.process-top > .eyebrow {
+		grid-column: 2;
+		grid-row: 1;
+	}
+	.process-top > h2 {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	.section-heading > .heading-note {
+		grid-column: 2;
+		grid-row: 2;
+		justify-self: start;
+		max-width: 420px;
+	}
+}
+@media (max-width: 700px) {
+	.section-heading,
+	.audience-intro,
+	.process-top {
+		grid-template-columns: minmax(0, 1fr);
+		row-gap: 18px;
+	}
+	.section-heading > .section-label,
+	.audience-intro > .section-label,
+	.process-top > .section-label,
+	.section-heading > div:not(.section-label),
+	.audience-intro > h2,
+	.process-top > .eyebrow,
+	.process-top > h2,
+	.section-heading > .heading-note {
+		grid-column: 1;
+		grid-row: auto;
+		justify-self: start;
+		max-width: none;
+	}
+}
+
+/* ---------------------------------------------------------------------------
+   Footer.
+   It previously held a logo, one tagline and an arrow on a 1440px canvas, which
+   read as an unfinished page rather than an ending. It now carries the site's
+   navigation and contact details, which is what a B2B visitor looks for there.
+   --------------------------------------------------------------------------- */
+.footer-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+	column-gap: 48px;
+	row-gap: 44px;
+	padding: 76px 0 52px;
+}
+.footer-brand-col p {
+	max-width: 300px;
+	margin: 20px 0 0;
+	color: var(--muted-on-dark);
+	font-size: 15px;
+	line-height: 1.6;
+}
+.footer-col {
+	display: grid;
+	align-content: start;
+	gap: 11px;
+}
+.footer-col h2 {
+	margin: 0 0 7px;
+	color: var(--muted-on-dark);
+	font-family: var(--body);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+.site-footer .footer-col a {
+	color: var(--white);
+	font-size: 15px;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+.site-footer .footer-col a:hover {
+	color: var(--accent-on-dark);
+}
+.footer-col p {
+	margin: 0;
+	color: var(--muted-on-dark);
+	font-size: 15px;
+	line-height: 1.55;
+}
+.site-footer .footer-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 32px;
+	justify-content: space-between;
+	padding: 22px 0 32px;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	color: var(--muted-on-dark);
+	font-size: 13px;
+}
+.site-footer .footer-top-link {
+	color: var(--white);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+@media (max-width: 980px) {
+	.footer-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		padding: 60px 0 44px;
+	}
+}
+@media (max-width: 700px) {
+	.footer-grid {
+		grid-template-columns: minmax(0, 1fr);
+		row-gap: 36px;
+		padding: 52px 0 36px;
+	}
+}
+.footer-brand-col .brand-logo {
+	height: 34px;
 }
