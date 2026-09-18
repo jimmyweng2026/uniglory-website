@@ -443,26 +443,7 @@
                 >Source modules <span aria-hidden="true">↗</span></a
               >
             </article>
-            <article
-              class="solution-card solution-card-image reveal reveal-delay"
-            >
-              <div class="card-image">
-                <!-- Photo: Unsplash photo-1592833159155-c62df1b65634 -->
-                <picture>
-                  <source
-                    srcset="/images/solar-panel-detail.avif"
-                    type="image/avif"
-                  />
-                  <img
-                    src="/images/solar-panel-detail.jpg"
-                    alt="Close view of solar panels reflecting the sky"
-                    width="640"
-                    height="960"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              </div>
+            <article class="solution-card solution-card-tint reveal reveal-delay">
               <div class="card-topline">
                 <span>02 / STORAGE</span><span aria-hidden="true">↗</span>
               </div>
@@ -502,29 +483,6 @@
 
       <section class="section why-section" id="why-uniglory">
         <div class="container why-grid">
-          <div class="why-visual reveal">
-            <div class="why-image">
-              <!-- Photo: Unsplash photo-1473341304170-971dccb5ac1e -->
-              <picture>
-                <source
-                  srcset="/images/solar-farm-horizon.avif"
-                  type="image/avif"
-                />
-                <img
-                  src="/images/solar-farm-horizon.jpg"
-                  alt="Solar panels stretching toward a mountain horizon"
-                  width="1100"
-                  height="733"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-            </div>
-            <div class="why-stamp">
-              <span>POWERING</span><strong>THE<br />POSSIBLE</strong
-              ><span>EST. 2024 · CA</span>
-            </div>
-          </div>
           <div class="why-copy reveal reveal-delay">
             <div class="section-label">
               <span>03</span><span>Why UniGlory</span>
@@ -569,6 +527,27 @@
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="why-visual reveal">
+            <div class="why-image">
+              <!-- Photo: Unsplash photo-1473341304170-971dccb5ac1e
+                   注意：这张图没有 AVIF 版本。sips 为它写出的 AVIF 能被解码
+                   （naturalWidth 正确）但没有任何像素数据，Chrome 画出来全黑，
+                   且命中 <source type="image/avif"> 后不会再回落到 JPEG。
+                   页面就只剩一块空白。详见 HANDOFF §7。 -->
+              <img
+                src="/images/solar-farm-horizon.jpg"
+                alt="High-voltage transmission towers silhouetted against a sunset sky"
+                width="1100"
+                height="733"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="why-stamp">
+              <span>POWERING</span><strong>THE<br />POSSIBLE</strong
+              ><span>EST. 2024 · CA</span>
             </div>
           </div>
         </div>
@@ -769,29 +748,43 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-top">
-        <a
-          class="brand footer-brand"
-          href="/"
-          aria-label="UniGlory Energy home"
-        >
-          <img
-            class="brand-logo"
-            src="/brand/uniglory-logo-white.svg"
-            alt="UniGlory"
-            width="2450"
-            height="1110"
-          />
-        </a>
-        <p>Solar supply for a brighter, more capable tomorrow.</p>
-        <a class="footer-arrow" href="#top" aria-label="Back to top">↑</a>
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <a class="brand" href="/" aria-label="UniGlory Energy home">
+            <img
+              class="brand-logo"
+              src="/brand/uniglory-logo-white.svg"
+              alt="UniGlory"
+              width="2450"
+              height="1110"
+            />
+          </a>
+          <p>Solar supply for a brighter, more capable tomorrow.</p>
+        </div>
+        <nav class="footer-col" aria-label="Products">
+          <h2>Products</h2>
+          <a href="/solar-modules/">Solar modules</a>
+          <a href="/battery-storage/">Battery storage</a>
+          <a href="/inverters/">Inverters</a>
+        </nav>
+        <nav class="footer-col" aria-label="Company">
+          <h2>Company</h2>
+          <a href="/#why-uniglory">Why UniGlory</a>
+          <a href="/#about">About</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <div class="footer-col">
+          <h2>Get in touch</h2>
+          <a href="mailto:sales@unigloryenergy.com">sales@unigloryenergy.com</a>
+          <a href="tel:+14424629310">+1 442 462 9310</a>
+          <p>6255 Greasewood Ln<br />Phelan, CA 92371 &middot; USA</p>
+        </div>
       </div>
       <div class="container footer-bottom">
-        <span
-          >© <span id="year"></span> UniGlory Energy. All rights
-          reserved.</span
-        ><span>6255 Greasewood Ln · Phelan, CA 92371 · USA</span
-        ><span>Made for the energy transition.</span>
+        <span>&copy; <span id="year"></span> UniGlory Energy. All rights reserved.</span>
+        <span>Wholesale solar modules, battery storage &amp; inverters</span>
+        <a class="footer-top-link" href="#top">Back to top &uarr;</a>
       </div>
     </footer>
 
