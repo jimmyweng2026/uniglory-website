@@ -54,23 +54,14 @@
       name="twitter:image:alt"
       content="UniGlory Energy — wholesale solar modules, battery storage, and inverters"
     />
+    <!-- Fonts are declared in fonts.css, which Vite rewrites to hashed /assets/
+         URLs. A static rel="preload" cannot know those hashes: Vite treats a
+         leading-slash href in HTML as public-dir-relative and leaves it alone,
+         so the preload 404s on every page load. Don't re-add one unless the
+         fonts move somewhere Vite leaves untouched. -->
     <title>UniGlory Energy | Wholesale Solar Modules &amp; Battery Storage</title>
     <!-- Fonts are self-hosted (see fonts.css). Preloading the display face keeps
          the headline from swapping fonts after first paint. -->
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/instrument-serif-latin-400.woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/instrument-sans-latin-variable.woff2"
-      crossorigin
-    />
     <link rel="stylesheet" href="/styles.css?v=8" />
 
     <script type="application/ld+json">
