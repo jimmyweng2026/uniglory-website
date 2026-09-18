@@ -1612,7 +1612,9 @@ h3 {
 	}
 	.primary-nav {
 		border-color: rgba(22, 59, 67, 0.12);
-		background: rgba(255, 255, 255, 0.97);
+		/* Opaque on purpose: without a backdrop blur, 97% white left the hero
+		   text faintly ghosting through the open panel. */
+		background: #ffffff;
 		box-shadow: 0 20px 35px rgba(22, 59, 67, 0.14);
 	}
 	.primary-nav a:not(.nav-cta) {
@@ -1820,6 +1822,83 @@ h3 {
 		grid-template-columns: 26px 1fr;
 		gap: 14px;
 	}
+	/* Inside the mobile nav panel the dropdown becomes a plain nested list. */
+	.nav-products-panel {
+		position: static;
+		min-width: 0;
+		margin: 2px 0 6px 10px;
+		padding: 6px;
+		border-color: rgba(22, 59, 67, 0.12);
+		box-shadow: none;
+	}
+	.primary-nav .nav-products-panel a {
+		padding: 10px 12px;
+	}
+	.primary-nav .nav-products-panel .panel-all {
+		padding-left: 12px;
+	}
+}
+
+/* Products dropdown in the primary nav. Built on <details> so it needs no
+   JavaScript and stays keyboard- and touch-accessible, including inside the
+   mobile nav panel. Scales to any number of product pages. */
+.nav-products {
+	position: relative;
+}
+.nav-products > summary {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	list-style: none;
+	cursor: pointer;
+	color: rgba(22, 59, 67, 0.74);
+	transition: color 0.2s ease;
+}
+.nav-products > summary::-webkit-details-marker {
+	display: none;
+}
+.nav-products > summary::after {
+	content: "▾";
+	font-size: 9px;
+	opacity: 0.65;
+}
+.nav-products > summary:hover,
+.nav-products[open] > summary {
+	color: var(--ink);
+}
+.nav-products-panel {
+	position: absolute;
+	top: calc(100% + 16px);
+	left: -18px;
+	z-index: 5;
+	display: grid;
+	gap: 2px;
+	min-width: 228px;
+	padding: 12px;
+	border: 1px solid var(--line);
+	border-radius: 15px;
+	background: var(--white);
+	box-shadow: 0 18px 44px rgba(22, 59, 67, 0.14);
+}
+.primary-nav .nav-products-panel a {
+	padding: 9px 12px;
+	border-radius: 9px;
+	color: rgba(22, 59, 67, 0.78);
+}
+.primary-nav .nav-products-panel a:hover {
+	color: var(--ink);
+	background: rgba(22, 59, 67, 0.05);
+}
+.primary-nav .nav-products-panel .panel-all {
+	margin-top: 6px;
+	padding-top: 13px;
+	border-top: 1px solid var(--line);
+	border-radius: 0 0 9px 9px;
+	color: var(--muted);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
 }
 
 /* ---------------------------------------------------------------------------

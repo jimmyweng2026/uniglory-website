@@ -38,6 +38,8 @@ Key facts
 
 - [Home](https://www.unigloryenergy.com/): company overview, product portfolio, how ordering works, FAQ, and a quote request form.
 - [Solar modules](https://www.unigloryenergy.com/solar-modules/): the module range, what to check when specifying modules, and module-specific FAQ.
+- [Battery storage](https://www.unigloryenergy.com/battery-storage/): the LiFePO4 storage range, what to check when specifying storage, and storage-specific FAQ.
+- [Inverters](https://www.unigloryenergy.com/inverters/): the grid-tied and hybrid inverter range, what to check when specifying an inverter, and inverter-specific FAQ.
 
 ## Contact
 

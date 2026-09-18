@@ -10,6 +10,11 @@ export default defineConfig({
 			input: {
 				main: resolve(import.meta.dirname, "index.html"),
 				"solar-modules": resolve(import.meta.dirname, "solar-modules/index.html"),
+				"battery-storage": resolve(
+					import.meta.dirname,
+					"battery-storage/index.html",
+				),
+				inverters: resolve(import.meta.dirname, "inverters/index.html"),
 			},
 		},
 	},
