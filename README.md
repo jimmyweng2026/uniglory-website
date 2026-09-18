@@ -54,13 +54,13 @@ the live site.
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | The one-page site: copy, metadata, structured data |
+| `index.html` | The home page: copy, metadata, structured data |
 | `styles.css` | Stylesheet (bundled and minified into `dist/assets/`) |
 | `fonts.css` | Self-hosted `@font-face` rules, imported by `styles.css` |
 | `script.js` | Nav, scroll reveal, quote-form handling (copied as-is) |
 | `brand/` | Web-ready logo files, favicon, Apple touch icon, social share image |
-| `fonts/` | Variable web fonts plus their OFL licence files |
-| `images/` | Content photos as AVIF with JPEG fallbacks |
+| `fonts/` | Web fonts plus their OFL licence files |
+| `images/` | Content photos (AVIF where the encoder produces a valid file, always with a JPEG) |
 | `tools/` | Sources for generated assets and the contrast audit script |
 | `scripts/copy-static.mjs` | Completes `dist/` after `vite build` |
 | `Uniglory-logo/` | Original master logo artwork (never deployed) |
@@ -69,27 +69,32 @@ the live site.
 ## Fonts
 
 `fonts.css` (imported at the top of `styles.css`, and inlined into the single
-CSS bundle on build) declares two self-hosted variable fonts. One file per family
-covers every weight the design uses, which is smaller than shipping separate
-static weights:
+CSS bundle on build) declares two self-hosted faces:
 
 | File | Covers | Size |
 | --- | --- | --- |
-| `fonts/inter-latin-variable.woff2` | Inter 300–700 | 48 KB |
-| `fonts/inter-tight-latin-variable.woff2` | Inter Tight 300–700 | 24 KB |
+| `fonts/instrument-serif-latin-400.woff2` | Instrument Serif 400 (headlines only) | 15 KB |
+| `fonts/instrument-sans-latin-variable.woff2` | Instrument Sans 400–700 | 30 KB |
 
 Both are latin-subset only (the site is English-only) and both are licensed under
 the SIL Open Font License 1.1 — the licence texts ship alongside them as
-`fonts/Inter-OFL.txt` and `fonts/Inter Tight-OFL.txt`, as that licence requires.
+`fonts/InstrumentSerif-OFL.txt` and `fonts/InstrumentSans-OFL.txt`, as that
+licence requires.
+
+Instrument Serif ships a **single 400 weight**. Never set a heavier weight on a
+headline: the browser would synthesise a fake bold. Keep `--display` on `h1/h2/h3`
+only — small labels, navigation and buttons use `--body`, or the serif would
+distort them.
 
 There are no requests to `fonts.googleapis.com` or `fonts.gstatic.com` any more.
-The display face is preloaded in `index.html` so the headline does not swap
-fonts after first paint.
+Both faces are preloaded in all four pages, so headline and body text do not swap
+fonts after first paint. If you change or remove a font file, update those
+`rel="preload"` links in the same commit or they will request a file that no
+longer exists.
 
-To update a font: request the weight range from Google Fonts with a modern
-browser user agent (e.g. `family=Inter:wght@300..700`), download the `latin`
-variable woff2 it returns, replace the file, and copy the matching
-`unicode-range` value into `fonts.css`.
+To update a font: request it from Google Fonts with a modern browser user agent
+(e.g. `family=Instrument+Sans:wght@400..700`), download the `latin` woff2 it
+returns, and replace the file in `fonts/`.
 
 ## Content images
 
