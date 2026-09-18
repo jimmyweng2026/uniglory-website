@@ -1,4 +1,38 @@
+# UniGlory Energy — https://www.unigloryenergy.com
+
+# Everything on this site is public marketing content and may be crawled.
 User-agent: *
+Allow: /
+
+# AI answer engines and assistants below are explicitly welcome to read and
+# cite this site so that UniGlory Energy can appear in AI-generated answers.
+# The permissive `User-agent: *` rule above already covers them; these entries
+# document the intent. If you ever want to opt out of AI *training* crawlers
+# (as opposed to search/answer retrieval), add explicit `Disallow: /` blocks
+# for the agents you want to exclude, e.g. Google-Extended, Applebot-Extended,
+# CCBot, or Bytespider.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://www.unigloryenergy.com/sitemap.xml
