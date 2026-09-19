@@ -2146,6 +2146,12 @@ main p a:hover,
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	/* The supplier's product photography carries a strong warm cast — the cells
+	   read gold/khaki — which fights a palette that is neutral everywhere but
+	   the cyan accent. Greyscale keeps the photography honest (it is still the
+	   real module) while letting it sit in the page. One line to revert if the
+	   warm supplier images are ever wanted back. */
+	filter: grayscale(1);
 }
 .range-body {
 	display: flex;
