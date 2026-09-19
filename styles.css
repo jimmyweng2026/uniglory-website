@@ -2139,13 +2139,17 @@ main p a:hover,
 }
 .range-photo {
 	aspect-ratio: 2 / 3;
-	background: var(--ink);
+	/* The supplier's cut-outs carry transparency, so the photo area shows the
+	   page surface rather than a black plate: the module floats on it. */
+	background: var(--surface);
 }
 .range-photo img {
 	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	/* contain, not cover: these are cut-outs with transparency and each model
+	   is a different shape, so nothing may be cropped away. */
+	object-fit: contain;
 	/* The supplier's product photography carries a strong warm cast — the cells
 	   read gold/khaki — which fights a palette that is neutral everywhere but
 	   the cyan accent. Greyscale keeps the photography honest (it is still the
