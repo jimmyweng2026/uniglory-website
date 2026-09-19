@@ -18,3 +18,6 @@ _scratch/
 # Continuity notes — internal state, tokens, todos, session log.
 # The repository is public, so this stays local.
 HANDOFF.md
+
+# Internal working notes, not part of the published site.
+TODO-content.md
