@@ -2165,6 +2165,50 @@ main p a:hover,
 	max-width: 940px;
 }
 
+/* Common specification across the range. A definition list rather than prose:
+   these are the fields a specifier scans for, and machine-readable label/value
+   pairs are what answer engines quote. Every value here is the figure printed
+   in all four datasheets — nothing is generalised from one sheet. */
+.range-common {
+	margin-top: 56px;
+	border-top: 1px solid var(--line);
+	padding-top: 28px;
+}
+
+.range-common-label {
+	font-size: 12px;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+	color: var(--muted);
+	margin-bottom: 20px;
+}
+
+.range-common-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px 44px;
+}
+
+.range-common-list > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 14px;
+	border-bottom: 1px solid var(--line);
+	padding-bottom: 10px;
+}
+
+.range-common-list dt {
+	font-size: 14px;
+	color: var(--muted);
+}
+
+.range-common-list dd {
+	font-size: 14px;
+	font-weight: 600;
+	text-align: right;
+}
+
 .range-guide > h3 {
 	margin-bottom: 18px;
 	font-size: 20px;

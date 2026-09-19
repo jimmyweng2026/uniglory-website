@@ -128,10 +128,18 @@
               },
               {
                 "@type": "Question",
-                "name": "Are the modules bifacial?",
+                "name": "What is the degradation rate of the modules?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. All four power classes are bifacial: three use N-type TOPCon and one uses PERC."
+                  "text": "The N-type TOPCon classes are rated at under 1.0% degradation in the first year and 0.40% a year thereafter. The PERC bifacial class is rated at under 2.0% in the first year and 0.45% a year thereafter."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the load ratings and the operating range?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All four classes carry a 2400 Pa wind load and a 5400 Pa snow load rating, an IP68 junction box, and an operating range of −40 to +85 °C."
                 }
               },
               {
@@ -410,8 +418,20 @@
             </article>
           </div>
 
+          <div class="range-common reveal">
+            <p class="range-common-label">Common to the four classes</p>
+            <dl class="range-common-list">
+              <div><dt>Maximum system voltage</dt><dd>1500 V</dd></div>
+              <div><dt>Mechanical load</dt><dd>2400 Pa wind / 5400 Pa snow</dd></div>
+              <div><dt>Glass</dt><dd>2.0 mm front and rear, double glass</dd></div>
+              <div><dt>Junction box</dt><dd>IP68</dd></div>
+              <div><dt>NMOT</dt><dd>41 ± 3 °C</dd></div>
+              <div><dt>Operating range</dt><dd>−40 to +85 °C</dd></div>
+            </dl>
+          </div>
+
           <div class="range-guide reveal">
-            <h3>Which class for which job</h3>
+            <h3>Which module class for which project</h3>
             <ul class="checklist">
               <li>
                 <span class="mark">01</span>
@@ -457,12 +477,12 @@
               <span>02</span><span>Before you specify</span>
             </div>
             <div>
-              <p class="eyebrow dark-eyebrow">Five things that decide the job</p>
-              <h2>Module choices<br /><span>that come back to bite.</span></h2>
+              <p class="eyebrow dark-eyebrow">Module specification</p>
+              <h2>Specification notes<br /><span>for the people who quote.</span></h2>
             </div>
             <p class="heading-note">
-              General guidance from the supply side of the desk — worth checking
-              before you quote.
+              The engineering and commercial points that decide a module order —
+              not an introduction to what a solar module is.
             </p>
           </div>
 
@@ -472,55 +492,63 @@
             <li>
               <span class="mark">01</span>
               <div>
-                <h3>Power class and electrical match</h3>
+                <h3>Class choice is a balance-of-system decision</h3>
                 <p>
-                  Module wattage has to line up with your inverter's string
-                  window and the area you have to fill. Higher wattage per
-                  module means fewer modules, less racking, and less labour for
-                  the same array size — but only if the string maths works.
+                  Higher power per module means fewer modules, less racking,
+                  less cable and less labour for the same array. Match the class
+                  to the string window — every class carries a 1500 V system
+                  voltage rating — and settle the array layout before the price.
                 </p>
               </div>
             </li>
             <li>
               <span class="mark">02</span>
               <div>
-                <h3>Cell technology</h3>
+                <h3>Degradation: N-type against PERC</h3>
                 <p>
-                  Three of the four power classes are N-type TOPCon; the 550 W class is PERC bifacial. TOPCon’s passivating contact layer brings higher efficiency and a better temperature coefficient than older P-type designs, which shows up on hot roofs and in high-irradiance sites.
+                  The N-type TOPCon classes publish under 1.0% degradation in
+                  the first year and 0.40% a year thereafter. The PERC bifacial
+                  class publishes under 2.0% and 0.45%. Over 25 years of cash
+                  flow that difference is worth modelling rather than assuming.
                 </p>
               </div>
             </li>
             <li>
               <span class="mark">03</span>
               <div>
-                <h3>Bifacial only where it pays</h3>
+                <h3>Bifacial gain: where it actually converts</h3>
                 <p>
-                  Bifacial modules collect light on the back face too. That only
-                  converts into output when the mounting and the surface below
-                  actually reflect — white membrane roofs, ground mounts on
-                  light gravel. On dark shingles the gain is largely theoretical.
+                  Rear-side yield tracks albedo and mounting height. The
+                  datasheets publish backside gain at 5%, 15% and 25% albedo:
+                  white membrane roofs and elevated ground mounts on light
+                  gravel convert; dark shingle and flush residential mounts
+                  largely do not. Design the string on the front side and treat
+                  the rear as upside.
                 </p>
               </div>
             </li>
             <li>
               <span class="mark">04</span>
               <div>
-                <h3>Physical fit and handling</h3>
+                <h3>Weight, footprint and handling</h3>
                 <p>
-                  Check dimensions and weight against your racking, your lift,
-                  and your crew. Larger formats cut labour on commercial roofs
-                  and become awkward on steep residential pitches.
+                  24 kg on the 54-cell class and 31.5 to 32.5 kg on the 72-cell
+                  classes. The 550 W and 590 W share a single 2278 × 1134 mm
+                  footprint, so one racking layout carries across both.
                 </p>
               </div>
             </li>
             <li>
               <span class="mark">05</span>
               <div>
-                <h3>Documentation before the quote</h3>
+                <h3>Certification and project documentation</h3>
                 <p>
-                  Line up datasheets, warranty terms, and the certifications
-                  your AHJ and incentive programme require before you price the
-                  job — not after the purchase order is out.
+                  IEC 61215:2021 and IEC 61730:2023 module qualification, with
+                  ISO 9001, ISO 14001, ISO 45001 and IEC 62941 manufacturing
+                  systems behind them. Datasheets, certificates and the
+                  jurisdiction-specific documents your AHJ and incentive
+                  programme ask for, lined up before the quote rather than after
+                  the purchase order.
                 </p>
               </div>
             </li>
@@ -586,10 +614,18 @@
                 Our module range covers N-type TOPCon and PERC bifacial, for residential, commercial, and utility-scale applications.
               </p>
             </details>
+
             <details>
-              <summary>Are the modules bifacial?<span>+</span></summary>
+              <summary>What is the degradation rate of the modules?<span>+</span></summary>
               <p>
-                Yes. All four power classes are bifacial: three use N-type TOPCon and one uses PERC.
+                The N-type TOPCon classes are rated at under 1.0% degradation in the first year and 0.40% a year thereafter. The PERC bifacial class is rated at under 2.0% in the first year and 0.45% a year thereafter.
+              </p>
+            </details>
+
+            <details>
+              <summary>What are the load ratings and the operating range?<span>+</span></summary>
+              <p>
+                All four classes carry a 2400 Pa wind load and a 5400 Pa snow load rating, an IP68 junction box, and an operating range of −40 to +85 °C.
               </p>
             </details>
             <details>
