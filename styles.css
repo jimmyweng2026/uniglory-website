@@ -2157,6 +2157,19 @@ main p a:hover,
 	   warm supplier images are ever wanted back. */
 	filter: grayscale(1);
 }
+/* Which class for which job. Reuses the checklist list so it reads as the same
+   kind of advice as the "before you specify" section, but sits next to the range
+   it refers to. */
+.range-guide {
+	margin-top: 72px;
+	max-width: 940px;
+}
+
+.range-guide > h3 {
+	margin-bottom: 18px;
+	font-size: 20px;
+}
+
 .range-body {
 	display: flex;
 	flex: 1;
