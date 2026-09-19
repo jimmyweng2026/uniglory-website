@@ -69,32 +69,31 @@ the live site.
 ## Fonts
 
 `fonts.css` (imported at the top of `styles.css`, and inlined into the single
-CSS bundle on build) declares two self-hosted faces:
+CSS bundle on build) declares two self-hosted faces, matching the pairing used on
+iscogmbh.com:
 
 | File | Covers | Size |
 | --- | --- | --- |
-| `fonts/instrument-serif-latin-400.woff2` | Instrument Serif 400 (headlines only) | 15 KB |
-| `fonts/instrument-sans-latin-variable.woff2` | Instrument Sans 400–700 | 30 KB |
+| `fonts/outfit-latin-variable.woff2` | Outfit 300–800 (headlines) | 32 KB |
+| `fonts/source-sans-3-latin-variable.woff2` | Source Sans 3 300–700 (everything else) | 29 KB |
 
 Both are latin-subset only (the site is English-only) and both are licensed under
 the SIL Open Font License 1.1 — the licence texts ship alongside them as
-`fonts/InstrumentSerif-OFL.txt` and `fonts/InstrumentSans-OFL.txt`, as that
-licence requires.
+`fonts/Outfit-OFL.txt` and `fonts/SourceSans3-OFL.txt`, as that licence requires.
 
-Instrument Serif ships a **single 400 weight**. Never set a heavier weight on a
-headline: the browser would synthesise a fake bold. Keep `--display` on `h1/h2/h3`
-only — small labels, navigation and buttons use `--body`, or the serif would
-distort them.
+Outfit is the display face: keep `--display` on `h1/h2/h3` only. Small labels,
+navigation, buttons and form controls use `--body`, so they stay in Source Sans 3.
 
-There are no requests to `fonts.googleapis.com` or `fonts.gstatic.com` any more.
-Both faces are preloaded in all four pages, so headline and body text do not swap
-fonts after first paint. If you change or remove a font file, update those
-`rel="preload"` links in the same commit or they will request a file that no
-longer exists.
+There are no requests to `fonts.googleapis.com` or `fonts.gstatic.com`: the fonts
+are self-hosted rather than pulled from the CDN, which keeps the site free of
+third-party requests. Do **not** add `rel="preload"` links for them — Vite
+rewrites the `url()` inside CSS to a hashed `/assets/` path, but leaves a
+leading-slash `href` in HTML untouched, so a static preload would routinely
+request a file that does not exist.
 
 To update a font: request it from Google Fonts with a modern browser user agent
-(e.g. `family=Instrument+Sans:wght@400..700`), download the `latin` woff2 it
-returns, and replace the file in `fonts/`.
+(e.g. `family=Outfit:wght@300..800`), download the `latin` woff2 it returns, and
+replace the file in `fonts/`.
 
 ## Content images
 
