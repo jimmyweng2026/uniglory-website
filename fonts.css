@@ -1,27 +1,30 @@
 /* Self-hosted web fonts — no third-party requests.
  *
- *   Instrument Serif — by Rodrigo Fuenzalida, SIL Open Font License 1.1
- *                      (fonts/InstrumentSerif-OFL.txt) — headlines only,
- *                      one static 400 weight. Never set a heavier weight on it:
- *                      the browser would synthesise a fake bold.
- *   Instrument Sans  — by Rodrigo Fuenzalida, SIL Open Font License 1.1
- *                      (fonts/InstrumentSans-OFL.txt) — everything else,
- *                      variable 400–700 in one file.
+ *   Outfit          — by Rodrigo Fuenzalida & Smartsheet Inc, SIL Open Font
+ *                     License 1.1 (fonts/Outfit-OFL.txt). Headlines only,
+ *                     variable 300–800.
+ *   Source Sans 3   — by Adobe, SIL Open Font License 1.1
+ *                     (fonts/SourceSans3-OFL.txt). Everything else,
+ *                     variable 300–700.
+ *
+ * Same two families and the same mapping (Outfit on headings, Source Sans 3 on
+ * everything else) as iscogmbh.com, but self-hosted rather than loaded from the
+ * Google Fonts CDN, so the site keeps making zero third-party requests.
  *
  * Latin subset only; the site is English-only. Re-download instructions are in
  * README.md.
  */
 @font-face {
-	font-family: "Instrument Serif";
+	font-family: "Outfit";
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 300 800;
 	font-display: swap;
-	src: url("/fonts/instrument-serif-latin-400.woff2") format("woff2");
+	src: url("/fonts/outfit-latin-variable.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Instrument Sans";
+	font-family: "Source Sans 3";
 	font-style: normal;
-	font-weight: 400 700;
+	font-weight: 300 700;
 	font-display: swap;
-	src: url("/fonts/instrument-sans-latin-variable.woff2") format("woff2");
+	src: url("/fonts/source-sans-3-latin-variable.woff2") format("woff2");
 }
