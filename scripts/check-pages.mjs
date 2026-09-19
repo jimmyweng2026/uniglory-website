@@ -10,11 +10,15 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
+// Directories the page check never walks. Underscore-prefixed folders hold
+// scratch, preview and verification output: HTML in them is not part of the
+// site, so e.g. a one-off preview page with its own markup must not fail the
+// build for lacking the shared header and footer.
 const skipDirs = new Set(["node_modules", "dist", ".git", "tools", "scripts", "brand", "fonts", "images", "Uniglory-logo"]);
 
 async function findPages(dir, found = []) {
 	for (const entry of await readdir(dir, { withFileTypes: true })) {
-		if (entry.name.startsWith(".") || skipDirs.has(entry.name)) continue;
+		if (entry.name.startsWith(".") || entry.name.startsWith("_") || skipDirs.has(entry.name)) continue;
 		const full = path.join(dir, entry.name);
 		if (entry.isDirectory()) await findPages(full, found);
 		else if (entry.name.endsWith(".html")) found.push(full);
