@@ -2114,3 +2114,88 @@ main p a:hover,
 .footer-brand-col .brand-logo {
 	height: 34px;
 }
+
+/* Module range cards (product pages) ----------------------------------------
+   图片来自厂家规格书，深色背景的 2:3 竖版；卡片底用浅灰，让照片本身成为色块。 */
+.range-intro {
+	max-width: 62ch;
+	margin: 0 0 34px;
+	font-size: 18px;
+	line-height: 1.65;
+	color: var(--ink-soft);
+}
+.range-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 22px;
+}
+.range-card {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	border-radius: var(--radius-lg);
+	background: var(--surface);
+}
+.range-photo {
+	aspect-ratio: 2 / 3;
+	background: var(--ink);
+}
+.range-photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.range-body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 24px 24px 28px;
+}
+.range-power {
+	font-family: var(--display);
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	line-height: 1.05;
+}
+.range-type {
+	margin: 8px 0 0;
+	color: var(--muted);
+	font-size: 14px;
+}
+.range-specs {
+	display: grid;
+	gap: 7px;
+	margin: 18px 0 0;
+	padding: 16px 0 0;
+	border-top: 1px solid var(--line);
+	font-size: 14px;
+	line-height: 1.5;
+}
+.range-specs div {
+	display: flex;
+	justify-content: space-between;
+	gap: 14px;
+}
+.range-specs dt {
+	color: var(--muted);
+}
+.range-specs dd {
+	margin: 0;
+	text-align: right;
+}
+@media (max-width: 1100px) {
+	.range-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+@media (max-width: 700px) {
+	.range-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.range-photo {
+		aspect-ratio: 16 / 9;
+	}
+}

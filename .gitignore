@@ -10,6 +10,7 @@ UniGlory公司介绍.docx
 # Internal business documents — must never be published with the site
 DKIM*.docx
 UniGlory Energy GCL.xlsx
+specification sheet/
 
 # Local screenshot and probe scratch space
 _scratch/
