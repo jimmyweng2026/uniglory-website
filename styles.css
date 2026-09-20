@@ -497,7 +497,7 @@ h3 {
 	width: 100%;
 	overflow: hidden;
 	border-top: 1px solid var(--line);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	border-bottom: 1px solid var(--line);
 	color: var(--muted);
 	font-family: var(--body);
 	font-size: 12px;
@@ -661,8 +661,8 @@ h3 {
 
 /* Why */
 .why-section {
-	color: var(--white);
-	background: var(--ink);
+	color: var(--ink);
+	background: transparent;
 }
 .why-grid {
 	display: grid;
@@ -675,22 +675,15 @@ h3 {
 	min-height: 590px;
 }
 .why-image {
-	height: 590px;
+	aspect-ratio: 1 / 1;
 	overflow: hidden;
-	border-radius: 150px 18px 18px 18px;
+	border-radius: 10px;
 }
 .why-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	opacity: 0.72;
-}
-.why-image::after {
-	position: absolute;
-	inset: 0;
-	content: "";
-	border-radius: 150px 18px 18px 18px;
-	background: linear-gradient(0deg, rgba(13, 13, 15, 0.7), transparent 65%);
+	opacity: 1;
 }
 .why-stamp {
 	position: absolute;
@@ -705,8 +698,8 @@ h3 {
 	gap: 4px;
 	border: 1px solid var(--gold);
 	border-radius: 50%;
-	color: var(--gold);
-	background: var(--ink);
+	color: var(--ink);
+	background: var(--white);
 	text-align: center;
 	transform: rotate(11deg);
 }
@@ -726,19 +719,19 @@ h3 {
 	margin-bottom: 22px;
 }
 .why-copy h2 span {
-	color: var(--heading-soft-on-dark);
+	color: var(--heading-soft);
 }
 .why-copy > p:not(.eyebrow) {
 	max-width: 520px;
 	margin-bottom: 45px;
-	color: rgba(255, 255, 255, 0.59);
+	color: rgba(13, 13, 15, 0.64);
 }
 .why-copy .section-label {
 	margin-bottom: 70px;
-	color: var(--muted-on-dark);
+	color: var(--muted);
 }
 .why-copy .section-label span:first-child {
-	color: var(--muted-on-dark);
+	color: var(--muted);
 }
 .benefit-list {
 	display: grid;
@@ -749,25 +742,25 @@ h3 {
 	grid-template-columns: 43px 1fr;
 	gap: 20px;
 	padding: 21px 0;
-	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	border-top: 1px solid var(--line);
 }
 .benefit:last-child {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	border-bottom: 1px solid var(--line);
 }
 .benefit-number {
-	color: var(--muted-on-dark);
+	color: rgba(13, 13, 15, 0.64);
 	font-family: var(--body);
 	font-size: 12px;
 }
 .benefit h3 {
 	margin: 0 0 7px;
-	color: var(--white);
+	color: var(--ink);
 	font-size: 20px;
 	letter-spacing: -0.01em;
 }
 .benefit p {
 	margin: 0;
-	color: var(--muted-on-dark);
+	color: rgba(13, 13, 15, 0.64);
 	font-size: 14px;
 }
 
@@ -1340,13 +1333,10 @@ h3 {
 		min-height: 440px;
 	}
 	.why-image {
-		height: 440px;
-		border-radius: 115px 15px 15px 15px;
+		aspect-ratio: 1 / 1;
+		border-radius: 8px;
 	}
-	.why-image::after {
-		border-radius: 115px 15px 15px 15px;
-	}
-	.why-stamp {
+		.why-stamp {
 		right: -25px;
 		width: 120px;
 		height: 120px;
@@ -1571,7 +1561,6 @@ h3 {
 .intro-aside span {
 	color: rgba(255, 255, 255, 0.56);
 }
-.why-section,
 .contact-section,
 .site-footer {
 	background: var(--ink);
@@ -1830,11 +1819,6 @@ h3 {
 .hero-marquee {
 	border-color: var(--muted);
 }
-/* `dark-eyebrow` is also used inside the dark why-section, where the light
-   surface grey would only reach 2.3:1. */
-.why-section .dark-eyebrow {
-	color: var(--muted-on-dark);
-}
 
 /* The contact block sits on the navy surface, where the light-surface blue
    would only reach 3.0:1. Same reasoning as the why-section rule above. */
@@ -2010,7 +1994,7 @@ main p a:hover,
 	gap: 12px 32px;
 	justify-content: space-between;
 	padding: 22px 0 32px;
-	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	border-top: 1px solid var(--line);
 	color: var(--muted-on-dark);
 	font-size: 14px;
 }
