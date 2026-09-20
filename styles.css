@@ -2177,6 +2177,13 @@ main p a:hover,
 	aspect-ratio: 1 / 1;
 }
 
+/* Brand photography keeps its colour. The module cut-outs are greyscaled because
+   the supplier's warm cast fights the palette, but a product image with the
+   UniGlory mark on it must not be: greyscaling it turns the brand cyan grey. */
+.range-photo.is-brand img {
+	filter: none;
+}
+
 .range-common {
 	margin-top: 56px;
 	border-top: 1px solid var(--line);
