@@ -592,7 +592,7 @@ h3 {
 }
 .solution-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 16px;
 }
 .solution-card {
@@ -870,14 +870,20 @@ h3 {
 .audience-item {
 	position: relative;
 	min-height: 250px;
-	padding: 28px 30px 28px 0;
+	padding: 0;
 	border-right: 1px solid rgba(13, 13, 15, 0.25);
 }
-.audience-item + .audience-item {
+.audience-copy {
+	padding: 28px 30px 28px 0;
+}
+
+.audience-item + .audience-item .audience-copy {
 	padding-left: 30px;
 }
 .audience-item:last-child {
-	border-right: 0;
+	/* transparent, not none: removing the border would make the last column
+	   1px wider than the other two, and the images in the row would not line up. */
+	border-right: 1px solid transparent;
 }
 .audience-icon {
 	display: block;
@@ -1435,7 +1441,7 @@ h3 {
 	.audience-item,
 	.audience-item + .audience-item {
 		min-height: 210px;
-		padding: 25px 0;
+		padding: 0;
 		border-right: 0;
 		border-bottom: 1px solid rgba(13, 13, 15, 0.25);
 	}
@@ -2182,6 +2188,53 @@ main p a:hover,
    UniGlory mark on it must not be: greyscaling it turns the brand cyan grey. */
 .range-photo.is-brand img {
 	filter: none;
+}
+
+/* Solution cards carry a photograph behind the copy. The scrim is what keeps
+   white text readable over an unknown image, so it is deliberately strong and
+   flat rather than a subtle gradient. */
+.solution-card-photo {
+	position: relative;
+	overflow: hidden;
+	background: #0d0d0f;
+	color: #fff;
+}
+
+.card-bg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.card-scrim {
+	position: absolute;
+	inset: 0;
+	background: rgba(13, 13, 15, 0.74);
+	z-index: 1;
+}
+
+.solution-card-photo > *:not(.card-bg):not(.card-scrim) {
+	position: relative;
+	z-index: 2;
+}
+
+/* Audience cards carry photography rather than glyph icons, which read as too
+   thin at this size. The source images are 16:9, so object-fit: cover does not
+   crop them. */
+.audience-photo {
+	display: block;
+	width: 100%;
+	/* height: auto is load-bearing. Without it the presentational height
+	   attribute on the img wins over aspect-ratio, the box becomes portrait and
+	   object-fit crops a 16:9 photograph into a narrow vertical strip. */
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: var(--radius-lg);
+	margin-bottom: 24px;
 }
 
 /* Application imagery. Captions name the application, never "our project":
