@@ -398,12 +398,12 @@ h3 {
 }
 .hero-image-wrap {
 	position: relative;
-	height: 520px;
+	/* Square, with only a slight radius on all four corners, and no frame line. */
+	aspect-ratio: 1 / 1;
 	overflow: hidden;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 180px 180px 16px 16px;
+	border: 0;
+	border-radius: 10px;
 	background: #e5e5e7;
-	box-shadow: 0 35px 90px rgba(13, 13, 15, 0.12);
 }
 .hero-image-wrap img {
 	width: 100%;
@@ -1290,8 +1290,8 @@ h3 {
 		padding-top: 20px;
 	}
 	.hero-image-wrap {
-		height: 390px;
-		border-radius: 130px 130px 14px 14px;
+		aspect-ratio: 1 / 1;
+		border-radius: 8px;
 	}
 	.hero-float-card {
 		right: 12px;
@@ -1497,9 +1497,8 @@ h3 {
 	background: rgba(13, 13, 15, 0.18);
 }
 .hero-image-wrap {
-	border-color: rgba(13, 13, 15, 0.18);
+	border-color: transparent;
 	background: #e5e5e7;
-	box-shadow: 0 35px 90px rgba(13, 13, 15, 0.18);
 }
 .hero-image-wrap img {
 	mix-blend-mode: normal;
