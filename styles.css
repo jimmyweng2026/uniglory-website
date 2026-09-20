@@ -2237,38 +2237,6 @@ main p a:hover,
 	margin-bottom: 24px;
 }
 
-/* Application imagery. Captions name the application, never "our project":
-   UniGlory supplies at wholesale, so presenting these as company projects
-   would be a claim the business cannot make. Wide source images are shown at
-   their own proportions — never cropped into a fixed-ratio box, which is what
-   made the earlier thumbnails read badly. */
-.apps-block {
-	margin-top: 72px;
-}
-
-.apps-block > h3 {
-	margin-bottom: 22px;
-	font-size: 20px;
-}
-
-.apps-banner {
-	margin: 0;
-}
-
-.apps-banner img {
-	display: block;
-	width: 100%;
-	height: auto;
-	border-radius: var(--radius-lg);
-}
-
-.apps-banner figcaption {
-	margin-top: 10px;
-	font-size: 13px;
-	line-height: 1.5;
-	color: var(--muted);
-}
-
 .range-common {
 	margin-top: 56px;
 	border-top: 1px solid var(--line);
