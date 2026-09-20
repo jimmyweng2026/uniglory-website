@@ -119,10 +119,9 @@ button {
 .section {
 	/* 垂直节奏：相邻两个同底色区段的内边距会叠加成一条纯白带（104+104=208px），
 	   眼睛会把它读成“两段色带”，这正是页面显得松散的原因。同底色邻接取小值。 */
-	padding: 76px 0;
+	padding: 56px 0;
 }
 /* 深色色带（Why / Contact）自带分量，保留更大的呼吸，让色带边界清晰 */
-.section.why-section,
 .section.contact-section {
 	padding: 108px 0;
 }
@@ -672,7 +671,6 @@ h3 {
 }
 .why-visual {
 	position: relative;
-	min-height: 590px;
 }
 .why-image {
 	aspect-ratio: 1 / 1;
@@ -1208,9 +1206,8 @@ h3 {
 		width: calc(100% - 36px);
 	}
 	.section {
-		padding: 64px 0;
+		padding: 48px 0;
 	}
-	.section.why-section,
 	.section.contact-section {
 		padding: 88px 0;
 	}
@@ -1323,7 +1320,7 @@ h3 {
 		grid-template-columns: 1fr;
 	}
 	.solution-card {
-		min-height: 440px;
+		
 	}
 	.solution-card + .solution-card {
 		margin-top: 14px;
