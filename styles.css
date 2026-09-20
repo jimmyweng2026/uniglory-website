@@ -2197,21 +2197,14 @@ main p a:hover,
 }
 
 .apps-banner,
-.apps-grid figure,
 .apps-wide {
 	margin: 0;
 }
 
 .apps-banner img,
 .apps-wide img,
-.apps-grid img {
-	display: block;
-	width: 100%;
-	border-radius: var(--radius-lg);
-}
 
 .apps-banner figcaption,
-.apps-grid figcaption,
 .apps-wide figcaption {
 	margin-top: 10px;
 	font-size: 13px;
@@ -2219,26 +2212,8 @@ main p a:hover,
 	color: var(--muted);
 }
 
-.apps-grid {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 22px;
-	margin-top: 24px;
-}
-
-.apps-grid img {
-	aspect-ratio: 16 / 9;
-	object-fit: cover;
-}
-
 .apps-wide {
 	margin-top: 46px;
-}
-
-@media (max-width: 700px) {
-	.apps-grid {
-		grid-template-columns: 1fr;
-	}
 }
 
 .range-common {
