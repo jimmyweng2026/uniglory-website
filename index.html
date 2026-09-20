@@ -590,7 +590,12 @@
           <div class="apps-block reveal">
             <figure class="apps-banner">
               <picture>
-                  <source type="image/avif" srcset="/images/apps-utility-scale.avif" />
+                  <!-- JPEG only. The AVIF this was encoded to reported correct
+                       dimensions in Chrome but could not be painted — a canvas
+                       read-back returned no pixels at all, so the image box
+                       rendered empty. Verified by canvas read-back, which is the
+                       only check that catches this; decoding with sips does not,
+                       because sips is the tool that writes these files. -->
                   <img
                     src="/images/apps-utility-scale.jpg"
                     alt="Aerial view of a utility-scale ground-mounted solar farm"
