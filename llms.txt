@@ -17,7 +17,7 @@ Key facts
 
 - Solar modules: PERC and TOPCon modules for residential, commercial, and utility-scale applications, including all-black and bifacial formats. See [Solar modules](https://www.unigloryenergy.com/solar-modules/).
 - BESS (battery energy storage systems): LiFePO4 storage from 16 kWh to 6.25 MWh across three tiers. 16 kWh residential units in a stackable storage-only version and an all-in-one with a built-in inverter, a 261 kWh liquid-cooled commercial and industrial cabinet rated at 125 kW, and 5 MWh container skids rated at 5015 or 6250 kWh. Every tier is parallel-capable.
-- Solar inverters: grid-tied and hybrid inverters matched to the modules and storage specified for each project.
+- Hybrid inverters: single-phase 3-15 kW across two series (ELS3-6K and ELS7.5-15K) and three-phase 4-12 kW (EPH series), matched to the modules and BESS specified for each project.
 - Supply support: order quantities from single-pallet distribution orders to utility-scale project supply, with project-scale logistics and post-sale support.
 
 ## Customers
