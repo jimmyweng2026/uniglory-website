@@ -2169,6 +2169,14 @@ main p a:hover,
    these are the fields a specifier scans for, and machine-readable label/value
    pairs are what answer engines quote. Every value here is the figure printed
    in all four datasheets — nothing is generalised from one sheet. */
+/* Storage product cut-outs mix tall cabinets with a wide container skid, so the
+   photo area is square rather than the module page's 2:3. Higher specificity
+   than .range-photo keeps it square at every width, including the mobile
+   16/9 rule. */
+.range-photo.is-square {
+	aspect-ratio: 1 / 1;
+}
+
 .range-common {
 	margin-top: 56px;
 	border-top: 1px solid var(--line);

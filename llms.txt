@@ -1,7 +1,7 @@
 # UniGlory Energy
 
 > UniGlory Energy is a California-based wholesale supplier of solar modules,
-> battery energy storage systems (BESS), and inverters for solar installers,
+> BESS (battery energy storage systems), and inverters for solar installers,
 > distributors, EPC contractors, and project developers across the United States.
 
 Key facts
@@ -16,7 +16,7 @@ Key facts
 ## Products and services
 
 - Solar modules: PERC and TOPCon modules for residential, commercial, and utility-scale applications, including all-black and bifacial formats. See [Solar modules](https://www.unigloryenergy.com/solar-modules/).
-- Battery energy storage: lithium iron phosphate (LiFePO4) battery energy storage systems for residential, commercial, and project-scale installations.
+- BESS (battery energy storage systems): LiFePO4 storage from 16 kWh to 6.25 MWh across three tiers. 16 kWh residential units in a stackable storage-only version and an all-in-one with a built-in inverter, a 261 kWh liquid-cooled commercial and industrial cabinet rated at 125 kW, and 5 MWh container skids rated at 5015 or 6250 kWh. Every tier is parallel-capable.
 - Solar inverters: grid-tied and hybrid inverters matched to the modules and storage specified for each project.
 - Supply support: order quantities from single-pallet distribution orders to utility-scale project supply, with project-scale logistics and post-sale support.
 
@@ -30,7 +30,7 @@ Key facts
 ## Frequently asked questions
 
 - Who does UniGlory Energy serve? We serve solar installers, distributors, EPC contractors, and project developers across the United States.
-- What products can you supply? Our core portfolio includes solar modules, LiFePO4 battery energy storage systems, and grid-tied or hybrid inverters.
+- What products can you supply? Our core portfolio includes solar modules, LiFePO4 battery energy storage systems (BESS) from 16 kWh to 6.25 MWh, and grid-tied or hybrid inverters.
 - Can you support project and distribution orders? Yes. We can discuss utility-scale project requirements as well as flexible-quantity orders for distribution and installation businesses.
 - Where is UniGlory Energy based? UniGlory Energy is based in Phelan, California, with a Southern California supply and delivery focus.
 
@@ -38,7 +38,7 @@ Key facts
 
 - [Home](https://www.unigloryenergy.com/): company overview, product portfolio, how ordering works, FAQ, and a quote request form.
 - [Solar modules](https://www.unigloryenergy.com/solar-modules/): the module range, what to check when specifying modules, and module-specific FAQ.
-- [Battery storage](https://www.unigloryenergy.com/battery-storage/): the LiFePO4 storage range, what to check when specifying storage, and storage-specific FAQ.
+- [BESS](https://www.unigloryenergy.com/battery-storage/): the LiFePO4 storage range from 16 kWh to 6.25 MWh, how to size energy against power, and BESS-specific FAQ.
 - [Inverters](https://www.unigloryenergy.com/inverters/): the grid-tied and hybrid inverter range, what to check when specifying an inverter, and inverter-specific FAQ.
 
 ## Contact
