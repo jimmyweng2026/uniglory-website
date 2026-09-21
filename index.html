@@ -704,6 +704,28 @@
             action="https://formspree.io/f/mgawwpaq"
             method="POST"
           >
+            <!-- Formspree configuration. `_next` returns the visitor to this page
+                 instead of Formspree's own confirmation screen; `_gotcha` is a
+                 honeypot that must stay empty; `_subject` makes notifications
+                 triageable. `_replyto` is deprecated — Formspree replies to the
+                 `email` field, whose name is already correct. -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.unigloryenergy.com/#contact"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New quote request from the website"
+            />
+            <label class="honeypot" aria-hidden="true"
+              >Leave this field empty<input
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+            /></label>
             <div class="form-heading">
               <span>QUICK BRIEF</span><span>We reply promptly</span>
             </div>

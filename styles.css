@@ -93,6 +93,17 @@ button {
 }
 
 /* Shared typography */
+/* Honeypot for the quote form. Off-screen rather than display:none, so simple
+   bots still fill it, and hidden from assistive tech and the tab order so it is
+   not a trap for people. */
+.honeypot {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 .eyebrow {
 	display: flex;
 	align-items: center;
