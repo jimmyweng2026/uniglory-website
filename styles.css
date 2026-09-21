@@ -783,14 +783,11 @@ h3 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0;
-	border-top: 1px solid rgba(13, 13, 15, 0.25);
-	border-bottom: 1px solid rgba(13, 13, 15, 0.25);
 }
 .audience-item {
 	position: relative;
 	min-height: 250px;
 	padding: 0;
-	border-right: 1px solid rgba(13, 13, 15, 0.25);
 }
 .audience-copy {
 	padding: 28px 30px 28px 0;
@@ -798,11 +795,6 @@ h3 {
 
 .audience-item + .audience-item .audience-copy {
 	padding-left: 30px;
-}
-.audience-item:last-child {
-	/* transparent, not none: removing the border would make the last column
-	   1px wider than the other two, and the images in the row would not line up. */
-	border-right: 1px solid transparent;
 }
 .audience-icon {
 	display: block;
@@ -1351,17 +1343,11 @@ h3 {
 		margin-bottom: 38px;
 	}
 	.audience-grid {
-		border-bottom: 0;
 	}
 	.audience-item,
 	.audience-item + .audience-item {
 		min-height: 210px;
 		padding: 0;
-		border-right: 0;
-		border-bottom: 1px solid rgba(13, 13, 15, 0.25);
-	}
-	.audience-item:last-child {
-		border-bottom: 0;
 	}
 	.process-top .eyebrow {
 		margin-top: 30px;
